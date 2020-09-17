@@ -1,6 +1,5 @@
 package ru.vsu.cs.ivanov;
 
-import java.awt.geom.Area;
 import java.util.Scanner;
 
 public class Main {
