@@ -93,12 +93,13 @@ class Program {
                 || (circleBig.isCircle(x, y) && !parabola.isParabola(x, y) && (y < 5))) {
             return SimpleColor.WHITE;
         }
-        if ((square.isSquare(x, y) && !parabola.isParabola(x, y) && !circleBig.isCircle(x, y) && !circleSmall.isCircle(x, y))
-                || (circleBig.isCircle(x, y) && parabola.isParabola(x, y) && !square.isSquare(x, y))) {
+        if ((square.isSquare(x, y) && !parabola.isParabola(x, y) && !circleBig.isCircle(x, y)
+                && !circleSmall.isCircle(x, y)) || (circleBig.isCircle(x, y)
+                && parabola.isParabola(x, y) && !square.isSquare(x, y))) {
             return SimpleColor.GRAY;
         }
-        if ((circleSmall.isCircle(x, y) && !parabola.isParabola(x, y))
-                || (circleBig.isCircle(x, y) && !parabola.isParabola(x, y) && !square.isSquare(x, y) && (y > 5))) {
+        if ((circleSmall.isCircle(x, y) && !parabola.isParabola(x, y)) || (circleBig.isCircle(x, y)
+                && !parabola.isParabola(x, y) && !square.isSquare(x, y) && (y > 5))) {
             return SimpleColor.YELLOW;
         }
         return SimpleColor.ORANGE;
