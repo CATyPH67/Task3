@@ -1,7 +1,15 @@
 package ru.vsu.cs.ivanov;
 
+import java.util.Scanner;
+
 class Program
 {
+    public static double enterPointCoordinate(char coordinateName) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("enter %S for point: ", coordinateName);
+        return scanner.nextDouble();
+    }
+
     public static void printColorForPoint(double x, double y)
     {
         SimpleColor color = Program.getColor(x, y);

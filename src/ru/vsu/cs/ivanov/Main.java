@@ -12,11 +12,8 @@ public class Main
         Program.printColorForPoint(3, 3);
         Program.printColorForPoint(1, 7);
         Program.printColorForPoint(-1, 4);
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("enter x for point: ");
-        double x = scanner.nextDouble();
-        System.out.print("enter y for point: ");
-        double y = scanner.nextDouble();
+        double x = Program.enterPointCoordinate('x');
+        double y = Program.enterPointCoordinate('y');
         Program.printColorForPoint(x, y);
     }
 }
