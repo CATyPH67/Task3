@@ -23,13 +23,13 @@ class Program
         BLUE, GREEN, WHITE, ORANGE, GRAY, YELLOW
     }
 
+    private static Square square = new Square (-2, 1, 8);
+    private static Parabola parabola = new Parabola (4,6,-1);
+    private static Circle circleBig = new Circle (-4,5,5);
+    private static Circle circleSmall = new Circle (3,4,2);
+
     private static SimpleColor getColor(double x, double y)
     {
-        Square square = new Square (-2, 1, 8);
-        Parabola parabola = new Parabola (4,6,-1);
-        Circle circleBig = new Circle (-4,5,5);
-        Circle circleSmall = new Circle (3,4,2);
-
         if ((parabola.isParabola(x, y) && square.isSquare(x, y) && circleBig.isCircle(x, y))
                 || (parabola.isParabola(x, y) && !square.isSquare(x, y) && !circleBig.isCircle(x, y)))
         {
