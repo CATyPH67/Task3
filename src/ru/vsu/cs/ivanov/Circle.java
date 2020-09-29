@@ -14,4 +14,12 @@ public class Circle {
     public boolean isCircle(double x, double y) {
         return (Math.pow(x - x0, 2) + Math.pow(y - y0, 2)) <= Math.pow (r, 2);
     }
+
+    public boolean isUpperHalfCircle(double y) {
+        return y >= y0;
+    }
+
+    public boolean isLowerHalfCircle(double y) {
+        return y <= y0;
+    }
 }

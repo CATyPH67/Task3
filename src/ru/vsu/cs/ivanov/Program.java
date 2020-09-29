@@ -38,7 +38,7 @@ class Program
             return SimpleColor.BLUE;
         }
         if ((circleBig.isCircle(x, y) && square.isSquare(x, y) && !parabola.isParabola(x, y))
-                || (circleBig.isCircle(x, y) && !parabola.isParabola(x, y) && (y < 5)))
+                || (circleBig.isCircle(x, y) && !parabola.isParabola(x, y) && (circleBig.isLowerHalfCircle(y))))
         {
             return SimpleColor.WHITE;
         }
@@ -49,7 +49,7 @@ class Program
             return SimpleColor.GRAY;
         }
         if ((circleSmall.isCircle(x, y) && !parabola.isParabola(x, y)) || (circleBig.isCircle(x, y)
-                && !parabola.isParabola(x, y) && !square.isSquare(x, y) && (y > 5)))
+                && !parabola.isParabola(x, y) && !square.isSquare(x, y) && (circleBig.isUpperHalfCircle(y))))
         {
             return SimpleColor.YELLOW;
         }
