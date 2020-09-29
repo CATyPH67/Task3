@@ -1,19 +1,21 @@
 package ru.vsu.cs.ivanov;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 class Program
 {
     public static double enterPointCoordinate(char coordinateName) {
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("enter %s for point: ", coordinateName);
+        System.out.printf("Input %S: ", coordinateName);
         return scanner.nextDouble();
     }
 
     public static void printColorForPoint(double x, double y)
     {
+        Locale.setDefault(Locale.ROOT);
         SimpleColor color = Program.getColor(x, y);
-        System.out.printf("(%.1f; %.1f) -> %S%n", x, y, color);
+        System.out.printf("(%.1f, %.1f) -> %S%n", x, y, color);
     }
 
     enum SimpleColor
