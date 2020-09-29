@@ -1,8 +1,8 @@
 package ru.vsu.cs.ivanov;
 
 public class Square {
-    double x0; // x for left down point
-    double y0; // y for left down point
+    double x0; // x coordinate for the left down point of square
+    double y0; // y coordinate for the left down point of square
     double a; // square side length
 
     public Square(double x0, double y0, double a) {
