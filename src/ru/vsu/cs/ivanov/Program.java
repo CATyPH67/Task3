@@ -26,28 +26,28 @@ class Program {
     private static Circle circleSmall = new Circle (3,4,2);
 
     private static SimpleColor getColor(double x, double y) {
-        if ((parabola.isHorizontalParabola(x, y) && square.isSquare(x, y) && circleBig.isCircle(x, y))
-                || (parabola.isHorizontalParabola(x, y) && !square.isSquare(x, y) && !circleBig.isCircle(x, y))) {
+        if ((parabola.isPointInside(x, y) && square.isPointInside(x, y) && circleBig.isPointInside(x, y))
+                || (parabola.isPointInside(x, y) && !square.isPointInside(x, y) && !circleBig.isPointInside(x, y))) {
             return SimpleColor.GREEN;
         }
 
-        if (parabola.isHorizontalParabola(x, y) && !circleBig.isCircle(x, y) && !circleSmall.isCircle(x, y)) {
+        if (parabola.isPointInside(x, y) && !circleBig.isPointInside(x, y) && !circleSmall.isPointInside(x, y)) {
             return SimpleColor.BLUE;
         }
 
-        if ((circleBig.isCircle(x, y) && square.isSquare(x, y) && !parabola.isHorizontalParabola(x, y))
-                || (circleBig.isCircle(x, y) && !parabola.isHorizontalParabola(x, y) && (circleBig.isLowerHalfCircle(y)))) {
+        if ((circleBig.isPointInside(x, y) && square.isPointInside(x, y) && !parabola.isPointInside(x, y))
+                || (circleBig.isPointInside(x, y) && !parabola.isPointInside(x, y) && (circleBig.isLowerHalfCircle(y)))) {
             return SimpleColor.WHITE;
         }
 
-        if ((square.isSquare(x, y) && !parabola.isHorizontalParabola(x, y) && !circleBig.isCircle(x, y)
-                && !circleSmall.isCircle(x, y)) || (circleBig.isCircle(x, y)
-                && parabola.isHorizontalParabola(x, y) && !square.isSquare(x, y))) {
+        if ((square.isPointInside(x, y) && !parabola.isPointInside(x, y) && !circleBig.isPointInside(x, y)
+                && !circleSmall.isPointInside(x, y)) || (circleBig.isPointInside(x, y)
+                && parabola.isPointInside(x, y) && !square.isPointInside(x, y))) {
             return SimpleColor.GRAY;
         }
 
-        if ((circleSmall.isCircle(x, y) && !parabola.isHorizontalParabola(x, y)) || (circleBig.isCircle(x, y)
-                && !parabola.isHorizontalParabola(x, y) && !square.isSquare(x, y) && (circleBig.isUpperHalfCircle(y)))) {
+        if ((circleSmall.isPointInside(x, y) && !parabola.isPointInside(x, y)) || (circleBig.isPointInside(x, y)
+                && !parabola.isPointInside(x, y) && !square.isPointInside(x, y) && (circleBig.isUpperHalfCircle(y)))) {
             return SimpleColor.YELLOW;
         }
 

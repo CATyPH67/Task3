@@ -11,7 +11,11 @@ public class HorizontalParabola {
         this.a = a;
     }
 
-    public boolean isHorizontalParabola(double x, double y) {
-        return (a * Math.pow(y - y0, 2) + x0) >= x;
+    public boolean isPointInside(double x, double y) {
+        if (a > 0) {
+            return (a * Math.pow(y - y0, 2) + x0) <= x;
+        } else {
+            return (a * Math.pow(y - y0, 2) + x0) >= x;
+        }
     }
 }

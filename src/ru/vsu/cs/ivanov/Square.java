@@ -11,7 +11,7 @@ public class Square {
         this.a = a;
     }
 
-    public boolean isSquare(double x, double y) {
+    public boolean isPointInside(double x, double y) {
         return (x >= x0) && (x <= (x0 + a)) && (y >= y0) && (y <= (y0 + a));
     }
 }

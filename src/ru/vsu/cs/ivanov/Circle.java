@@ -11,7 +11,7 @@ public class Circle {
         this.r = r;
     }
 
-    public boolean isCircle(double x, double y) {
+    public boolean isPointInside(double x, double y) {
         return (Math.pow(x - x0, 2) + Math.pow(y - y0, 2)) <= Math.pow (r, 2);
     }
 
