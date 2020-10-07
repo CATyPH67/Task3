@@ -1,12 +1,19 @@
 package ru.vsu.cs.ivanov;
 
-public class Pictures {
-    private static Square square = new Square (-2, 1, 8);
-    private static HorizontalParabola parabola = new HorizontalParabola (4,6,-1);
-    private static Circle circleBig = new Circle (-4,5,5);
-    private static Circle circleSmall = new Circle (3,4,2);
+public class Picture {
+    private Square square;
+    private HorizontalParabola parabola;
+    private Circle circleBig;
+    private Circle circleSmall;
 
-    public static Main.SimpleColor getColor(double x, double y) {
+    public Picture (Square square, HorizontalParabola parabola, Circle circleBig, Circle circleSmall) {
+        this.square = square;
+        this.parabola = parabola;
+        this.circleBig = circleBig;
+        this.circleSmall = circleSmall;
+    }
+
+    public Main.SimpleColor getColor(double x, double y) {
         if ((parabola.isPointInside(x, y) && square.isPointInside(x, y) && circleBig.isPointInside(x, y))
                 || (parabola.isPointInside(x, y) && !square.isPointInside(x, y) && !circleBig.isPointInside(x, y))) {
             return Main.SimpleColor.GREEN;
