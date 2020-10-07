@@ -18,7 +18,7 @@ public class Main {
         double[][] arrayOfPoints = {{0,-4, 1, 3, 1,-1},
                                     {0, 1, 2, 3, 7, 4}};
         for (int i = 0; i <= 5; i++) {
-            outputColorForPoint(arrayOfPoints[i][0], arrayOfPoints[i][1], picture);
+            outputColorForPoint(arrayOfPoints[0][i], arrayOfPoints[1][i], picture);
         }
     }
 
