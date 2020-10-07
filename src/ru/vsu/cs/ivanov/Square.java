@@ -1,9 +1,9 @@
 package ru.vsu.cs.ivanov;
 
 public class Square {
-    double x0; // x coordinate for the left down point of square
-    double y0; // y coordinate for the left down point of square
-    double a; // square side length
+    private double x0; // x coordinate for the left down point of square
+    private double y0; // y coordinate for the left down point of square
+    private double a; // square side length
 
     public Square(double x0, double y0, double a) {
         this.x0 = x0;
