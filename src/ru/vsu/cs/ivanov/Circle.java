@@ -15,11 +15,11 @@ public class Circle {
         return (Math.pow(x - x0, 2) + Math.pow(y - y0, 2)) <= Math.pow (r, 2);
     }
 
-    public boolean isUpperHalfCircle(double y) {
+    public boolean isPointInsideUpperHalfCircle(double y) {
         return y >= y0;
     }
 
-    public boolean isLowerHalfCircle(double y) {
+    public boolean isPointInsideLowerHalfCircle(double y) {
         return y <= y0;
     }
 }
