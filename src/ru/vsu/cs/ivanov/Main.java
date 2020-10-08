@@ -31,9 +31,5 @@ public class Main {
         System.out.printf("Input %S: ", coordinateName);
         return scanner.nextDouble();
     }
-
-    enum SimpleColor {
-        BLUE, GREEN, WHITE, ORANGE, GRAY, YELLOW
-    }
 }
 
