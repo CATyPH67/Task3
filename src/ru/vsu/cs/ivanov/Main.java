@@ -32,4 +32,3 @@ public class Main {
         return scanner.nextDouble();
     }
 }
-
