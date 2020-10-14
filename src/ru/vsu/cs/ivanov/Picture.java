@@ -24,7 +24,7 @@ public class Picture {
         }
 
         if ((circleBig.isPointInside(x, y) && square.isPointInside(x, y) && !parabola.isPointInside(x, y))
-                || (circleBig.isPointInside(x, y) && !parabola.isPointInside(x, y) && (circleBig.isPointInsideLowerHalfCircle(x, y)))) {
+                || (circleBig.isPointInside(x, y) && !parabola.isPointInside(x, y) && (circleBig.isPointInsideLowerHalf(x, y)))) {
             return Enum.SimpleColor.WHITE;
         }
 
@@ -35,7 +35,7 @@ public class Picture {
         }
 
         if ((circleSmall.isPointInside(x, y) && !parabola.isPointInside(x, y)) || (circleBig.isPointInside(x, y)
-                && !parabola.isPointInside(x, y) && !square.isPointInside(x, y) && (circleBig.isPointInsideUpperHalfCircle(x, y)))) {
+                && !parabola.isPointInside(x, y) && !square.isPointInside(x, y) && (circleBig.isPointInsideUpperHalf(x, y)))) {
             return Enum.SimpleColor.YELLOW;
         }
 
