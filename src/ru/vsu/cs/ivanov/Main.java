@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         Locale.setDefault(Locale.ROOT);
         Picture picture = new Picture(new Square(-2, 1, 8), new HorizontalParabola (4,6,-1),
                                         new Circle (-4,5,5), new Circle (3,4,2));
@@ -14,7 +14,7 @@ public class Main {
         outputColorForPoint(x, y, picture);
     }
 
-    private static void test (Picture picture) {
+    private static void test(Picture picture) {
         double[][] arrayOfPoints = {{0,-4, 1, 3, 1,-1},
                                     {0, 1, 2, 3, 7, 4}};
         for (int i = 0; i <= 5; i++) {
@@ -22,7 +22,7 @@ public class Main {
         }
     }
 
-    private static void outputColorForPoint (double x, double y, Picture picture) {
+    private static void outputColorForPoint(double x, double y, Picture picture) {
         System.out.printf("(%.1f, %.1f) -> %S%n", x, y, picture.getColor(x, y));
     }
 

@@ -6,7 +6,7 @@ public class Picture {
     private Circle circleBig;
     private Circle circleSmall;
 
-    public Picture (Square square, HorizontalParabola parabola, Circle circleBig, Circle circleSmall) {
+    public Picture(Square square, HorizontalParabola parabola, Circle circleBig, Circle circleSmall) {
         this.square = square;
         this.parabola = parabola;
         this.circleBig = circleBig;
